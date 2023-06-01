@@ -12,10 +12,11 @@ class GiftService {
     AppState.gifts = res.data.map(g => new Gift(g))
     console.log(AppState.gifts);
   }
+  
   async openGift(gift){
-    console.log(gift)
     const res = await api.put(`api/gifts/${gift.id}`, gift)
-    console.log(res.data);
+   AppState.gifts = new Gift(res.data)
+
   }
 }
 

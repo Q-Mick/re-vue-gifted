@@ -1,4 +1,11 @@
 <template>
+<dialog open>
+  <p>Greetings, one and all!</p>
+  <form method="dialog">
+    <button>OK</button>
+  </form>
+</dialog>
+  
   <div class="container-fluid">
     <div class="row p-3">
       <div class="col-md-3 my-3" v-for="g in gifts" :key="g.id">
